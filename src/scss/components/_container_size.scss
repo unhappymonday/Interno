@@ -1,0 +1,33 @@
+@container header (width < 636px) {
+  .header-nav {
+    order: 3;
+    flex-grow: 2;
+  }
+
+  .input-search {
+    min-width: 250px;
+    padding: 10px 20px;
+
+    background: var(--light-900);
+    border-radius: 18px;
+  }
+
+  .input-search,
+  .focus::placeholder,
+  .unfocus::placeholder {
+    animation: none;
+    transition: none;
+  }
+
+}
+
+@container header (width < 455px) {
+  .header-nav {
+    display: none;
+  }
+
+  .header-search,
+  .input-search {
+    width: 100%;
+  }
+}

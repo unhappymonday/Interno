@@ -1,0 +1,30 @@
+
+@media (width < 740px) {
+  .header-container {
+    flex-wrap: wrap;
+  }
+
+  .input-search::placeholder {
+    color: var(--dark-300);
+  }
+
+  .input-search,
+  .focus::placeholder,
+  .unfocus::placeholder {
+    animation: none;
+    transition: none;
+  }
+
+  .hero {
+    border-radius: 0;
+    transition: border-radius .75s ease-in-out;
+  }
+
+  .hero-content {
+    align-items: center;
+
+    justify-self: center;
+
+    text-align: center;
+  }
+}

@@ -1,0 +1,77 @@
+.header-paddings {
+  padding: 1.25rem 0;
+}
+
+.header-container {
+  container: header / inline-size;
+}
+
+.header-container,
+.nav-list {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  flex-shrink: 1;
+}
+
+.nav-list {
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.nav-link {
+  position: relative;
+  padding: 12px 0;
+
+  font-size: var(--text-md);
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-block-end: 2px solid;
+  border-block-end-color: var(--primary);
+  border-image-slice: 2;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-50%) scaleX(0);
+}
+
+.nav-link:hover::before {
+  transform: translateX(0) scale(1);
+}
+
+.input-search {
+  width: 24px;
+
+  font-size: 1rem;
+
+  background: url("../assets/img/icons/search_icon.svg") no-repeat left / contain;
+  cursor: pointer;
+}
+
+.focus {
+  animation: searchInputScale 1s forwards ease-in-out;
+}
+
+.unfocus {
+  animation: searchInputReduce 1s forwards ease-in-out;
+}
+
+.input-search::placeholder {
+  color: transparent;
+}
+
+.focus::placeholder {
+  color: var(--dark-300);
+  transition: color 1.5s linear;
+}
+
+.unfocus::placeholder {
+  color: transparent;
+  transition: color .3s;
+}

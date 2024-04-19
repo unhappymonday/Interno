@@ -1,0 +1,32 @@
+
+@mixin btn-theme($theme, $paddingX: 48px, $icon-color: 'primary') {
+  .btn-#{$theme} {
+    padding: 26px $paddingX;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 18px;
+
+    @if $theme == 'dark' {
+      background: var(--dark-100);
+    }
+    @if $theme == 'primary' {
+      background: var(--primary);
+    }
+  }
+
+  .btn-icon-#{$icon-color} {
+    width: 19px;
+    height: 17px;
+    background: url("../assets/img/icons/arrow_icon_#{$icon-color}.svg") no-repeat center / cover;
+  }
+}
+
+@mixin btn-text-style($family: var(--text-semibold), $f-size: var(--text-sm), $color: var(--clr-w), $line-h: 125%) {
+  .btn-text {
+    font-family: $family;
+    font-size: $f-size;
+    color: $color;
+    line-height: $line-h;
+  }
+}
