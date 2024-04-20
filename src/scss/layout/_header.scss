@@ -12,10 +12,6 @@
   align-items: center;
 }
 
-.logo {
-  flex-shrink: 1;
-}
-
 .nav-list {
   padding: 0 20px;
   gap: 20px;
@@ -25,7 +21,7 @@
   position: relative;
   padding: 12px 0;
 
-  font-size: var(--text-md);
+  font-size: var(--font-size-md);
 }
 
 .nav-link::before {
@@ -55,11 +51,11 @@
 }
 
 .focus {
-  animation: searchInputScale 1s forwards ease-in-out;
+  animation: search-input-scale 1s forwards ease-in-out;
 }
 
 .unfocus {
-  animation: searchInputReduce 1s forwards ease-in-out;
+  animation: search-input-reduce 1s forwards ease-in-out;
 }
 
 .input-search::placeholder {

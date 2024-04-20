@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixin" as m;
 
 :root {
   @each $shade, $value in v.$color {
@@ -13,7 +14,7 @@
     --#{$font}: #{$value};
   }
 
-  @each $size, $value in v.$grid-sizes {
+  @each $size, $value in v.$sizes {
     --#{$size}: #{$value};
   }
 }
@@ -40,29 +41,28 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: var(--heading-font), sans-serif;
   line-height: 125%;
 }
 
-.grid-outer {
-  display: grid;
-  grid-template-columns:
-    [full-width-start] minmax(var(--padding-inline), 1fr)
-    [content-start] min(100% - (var(--padding-inline) * 2), var(--content-max-width)) [content-end]
-    minmax(var(--padding-inline), 1fr) [full-width-end];
-}
+// grid classes
 
-.grid-outer > :not(.full-width),
-.full-width > :not(.full-width) {
-  grid-column: content;
-}
-
-.grid-outer > .full-width {
-  grid-column: full-width;
-
-  display: grid;
-  grid-template-columns: inherit;
-}
-
-.d-flex {
+.flex {
   display: flex;
 }
+
+.grid {
+  display: grid;
+}
+
+// utility classes
+
+.margin-end {
+  margin-bottom: var(--margin-y);
+}
+
+.text-center {
+  text-align: center;
+}
+
+@include m.text-size;

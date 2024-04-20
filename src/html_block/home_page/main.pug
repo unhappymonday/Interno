@@ -1,8 +1,14 @@
-include ../abstracts/mixin.pug
+include ../components/button.pug
+include ../components/section_info.pug
 
 main.grid-outer
-  section.full-width.hero
-    .hero-content.d-flex
-      h1.main-title Let Your Home Be Unique
-      p.main-text There are many variations of the passages of lorem Ipsum fromavailable,variations of the passages.
+  section.full-width.hero.margin-end
+    .hero-content.flex
+      h1.fsz-xxl Let Your Home Be Unique
+      p.main-text.fsz-md There are many variations of the passages of lorem Ipsum fromavailable,variations of the passages.
       +button('dark', 'Get Started')
+  section.grid.grid-column-3-auto.quick-link-main-sections.margin-end
+    +section-info-card('Project Plan')
+    +section-info-card('Interior Work')
+    +section-info-card('Realization')
+

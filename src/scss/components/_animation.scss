@@ -1,12 +1,13 @@
 // focusAnimation
 
-@keyframes searchInputScale {
+@keyframes search-input-scale {
   from {
     width: 24px;
 
     background: transparent;
     caret-color: transparent;
   }
+
   to {
     width: 250px;
     padding: 10px 20px;
@@ -18,7 +19,7 @@
   }
 }
 
-@keyframes searchInputReduce {
+@keyframes search-input-reduce {
   from {
     width: 250px;
     padding: 10px 20px;
@@ -26,16 +27,8 @@
     background: var(--light-900);
     border-radius: 18px;
   }
+
   to {
     width: 24;
-  }
-}
-
-@keyframes showPlaceholder {
-  from {
-    color: transparent
-  }
-  to {
-    color: var(--dark-300);
   }
 }

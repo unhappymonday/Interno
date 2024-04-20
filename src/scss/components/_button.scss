@@ -1,6 +1,5 @@
 @import "../abstracts/mixin";
-
 @include btn-theme(dark);
-@include btn-text-style();
+@include btn-text-style;
 
 

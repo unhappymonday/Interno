@@ -1,3 +1,8 @@
+@media (width < 900px) {
+  .grid-column-3-auto {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 @media (width < 740px) {
   .header-container {
@@ -26,5 +31,22 @@
     justify-self: center;
 
     text-align: center;
+  }
+
+  .btn-paddings {
+    padding: 12px 24px;
+    border-radius: 10px;
+  }
+}
+
+@media (width < 530px) {
+  .grid-column-3-auto {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .grid-item-transfer:nth-child(3) {
+    grid-row: 3;
+    grid-column: span 1;
   }
 }

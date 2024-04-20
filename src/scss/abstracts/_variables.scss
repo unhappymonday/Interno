@@ -5,17 +5,18 @@ $color: (
   dark-300: hsl(212deg 4% 31%),
   light-900: hsl(30deg 27% 94%),
 );
-$grid-sizes: (
+$sizes: (
   content-max-width: 75rem,
   padding-inline: 2rem,
+  margin-y: clamp(6.25rem, 6.25vw + 5rem, 12.5rem)
 );
 $font-size: (
-  heading-84: clamp(1.5rem, 3.25vw + 1.5rem, 5.25rem),
-  heading-50: 3.125rem,
-  heading-32: 2rem,
-  text-lg: clamp(1.125rem, 0.25vw + 1rem, 1.375rem),
-  text-md: clamp(1rem,0.25vw + 1rem, 1.25rem),
-  text-sm: 1.125rem
+  font-size-xxl: clamp(2rem, 3.25vw + 1.35rem, 5.25rem),
+  font-size-xl: clamp(1.5rem, 1.625vw + 1.175rem, 3.125rem),
+  font-size-lg: clamp(1.25rem, 0.25vw + 1.2rem, 1.5rem),
+  font-size-md: clamp(1.125rem, 0.25vw + 1.075rem, 1.375rem),
+  font-size-xm: clamp(1rem, 0.125vw + 0.975rem, 1.125rem),
+  font-size-sm: clamp(0.875rem, 0.25vw + 0.825rem, 1.125rem)
 );
 $font-family: (
   heading-font: dmserifdisplay,
@@ -23,4 +24,6 @@ $font-family: (
   text-bold: jost-bold,
   text-semibold: jost-semibold,
   text-italic: jost-italic
-)
+);
+
+$sizes-abbr: 'xxl', 'xl', 'lg', 'md', 'xm', 'sm';

@@ -1,10 +1,10 @@
 
 mixin button(theme, text)
   if theme == 'dark'
-    button.btn-dark.d-flex
+    button.btn-paddings.btn-dark.flex
       span.btn-text= text
       span.btn-icon-primary
   else
-    button.btn-primary.d-flex
+    button.btn-paddings.btn-primary.flex
       span.btn-text= text
       span.btn-icon-dark
